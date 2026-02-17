@@ -1,3 +1,16 @@
 spring:
   application:
     name: iaDetector
+  servlet:
+    multipart:
+      enabled: true
+      # Increase max upload size to 50MB (tune as needed)
+      max-file-size: 50MB
+      max-request-size: 50MB
+
+ffprobe:
+  # Caminho pode ser:
+  # 1. "ffprobe" - se estiver no PATH
+  # 2. Caminho absoluto - ex: "C:/development/ffmpeg-8.0.1/bin/ffprobe.exe"
+  path: ffprobe
+  timeout-seconds: 30
